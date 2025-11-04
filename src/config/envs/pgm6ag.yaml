@@ -1,0 +1,28 @@
+env: "pgm6ag"
+# 6ag
+env_args:
+  grid_shape: [12, 12]
+  n_agents: 6
+  n_golds: 2  # Ng
+  n_stones: 3  # Np
+  # n_golds: 1  # Ng
+  # n_stones: 6  # Np
+  agent_view: [2, 2]
+  full_observable: False
+  step_cost: -0.2
+  stone_reward: 0.3
+  stone_disappear_steps: 10
+  gold_punish_steps: 10  # Td
+  gold_base_punish: -1
+  gold_reward: 30  # Rg
+  max_steps: 50
+
+# env
+t_max: 4000000
+test_greedy: True
+test_nepisode: 10
+test_interval: 10000
+log_interval: 10000
+runner_log_interval: 10000
+learner_log_interval: 10000
+save_model_interval: 500000

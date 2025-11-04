@@ -1,0 +1,40 @@
+env: "cleanup"
+# 3ag
+env_args:
+  # allow_giving: False
+  # asymmetric: False
+  beam_width: 1
+  cleaning_penalty: 0
+  disable_left_right_action: False
+  disable_rotation_action: True
+  global_ref_point: 
+  map_name: 'cleanup_10x10_sym'
+  n_agents: 4
+  name: 'ssd'
+  obs_cleaned_1hot: False
+  obs_height: 5
+  obs_width: 5
+  reward_value: 1.0
+  random_orientation: False
+  shuffle_spawn: True
+  view_size: 2  # 0.5(height - 1)
+  max_steps: 50
+  cleanup_params:
+    appleRespawnProbability: 0.3  # 10x10 0.3 | small 0.5 | large 0.125      default=0.125
+    thresholdDepletion: 0.4  # 10x10 0.4 | small 0.6             default=0.4
+    thresholdRestoration: 0.0  # 10x10 0.0 | small 0             default=0.0
+    wasteSpawnProbability: 0.5  # 10x10 0.5 | small 0.5          default=0.5
+    # appleRespawnProbability: 0.6  # 10x10 0.3 | small 0.5 | large 0.125      default=0.125
+    # thresholdDepletion: 0.4  # 10x10 0.4 | small 0.6             default=0.4
+    # thresholdRestoration: 0.0  # 10x10 0.0 | small 0             default=0.0
+    # wasteSpawnProbability: 0.1  # 10x10 0.5 | small 0.5          default=0.5
+
+# env
+t_max: 3000000
+test_greedy: True
+test_nepisode: 10
+test_interval: 10000
+log_interval: 10000
+runner_log_interval: 10000
+learner_log_interval: 10000
+save_model_interval: 500000

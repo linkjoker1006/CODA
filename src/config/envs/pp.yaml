@@ -1,0 +1,23 @@
+env: "pp"
+
+env_args:
+  grid_shape: [9, 9]
+  n_agents: 4
+  n_preys: 5
+  prey_move_probs: [0.175, 0.175, 0.175, 0.175, 0.3]
+  full_observable: False
+  penalty: -0.5
+  step_cost: -0.01
+  prey_capture_reward: 5
+  max_steps: 25
+  agent_view_mask: [5, 5]
+
+# env
+t_max: 3000000
+test_greedy: True
+test_nepisode: 10
+test_interval: 10000
+log_interval: 10000
+runner_log_interval: 10000
+learner_log_interval: 10000
+save_model_interval: 500000

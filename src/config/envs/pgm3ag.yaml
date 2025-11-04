@@ -1,0 +1,26 @@
+env: "pgm3ag"
+# 3ag
+env_args:
+  grid_shape: [8, 9]
+  n_agents: 3
+  n_golds: 1  # Ng
+  n_stones: 2  # Ns
+  agent_view: [1, 2]
+  full_observable: False
+  step_cost: -0.2
+  stone_reward: 0.3
+  stone_disappear_steps: 8
+  gold_punish_steps: 8  # Td
+  gold_base_punish: -1
+  gold_reward: 20  # Rg
+  max_steps: 25
+
+# env
+t_max: 2500000
+test_greedy: True
+test_nepisode: 10
+test_interval: 10000
+log_interval: 10000
+runner_log_interval: 10000
+learner_log_interval: 10000
+save_model_interval: 500000

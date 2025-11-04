@@ -1,0 +1,35 @@
+# --- I2Q specific parameters ---
+name: "i2q"
+common_reward: False
+standardise_rewards: False
+action_selector: "epsilon_greedy"
+runner: "parallel"
+batch_size_run: 1
+buffer_size: 10000
+batch_size: 32
+epsilon_start: 1.0
+epsilon_finish: 0.05
+epsilon_anneal_time: 50000
+obs_agent_id: False 
+obs_last_action: True 
+# use the Q_Learner to train
+mac: "n_mac"
+shared_agent: False
+agent: "n_rnn_ns"
+agent_output_type: "q"
+# update the target network every {} episodes
+target_update_interval: 200
+learner: "nq_learner_i2q"
+mixer:
+lamb: 0.2
+tau: 0.52
+# network
+rnn_hidden_dim: 64
+lr: 0.001
+td_lambda: 0
+optimizer: 'adam'
+optim_alpha: 0.99
+optim_eps: 0.00000001
+use_layer_norm: False
+use_orthogonal: False
+gain: 0.01

@@ -1,0 +1,39 @@
+# --- QMIX specific parameters ---
+action_selector: "epsilon_greedy"
+runner: "parallel"
+shared_agent: True
+batch_size_run: 8
+buffer_size: 5000
+batch_size: 32
+epsilon_start: 1.0
+epsilon_finish: 0.05
+epsilon_anneal_time: 50000
+obs_agent_id: True 
+obs_last_action: False 
+standardise_rewards: True
+# use the Q_Learner to train
+mac: "n_mac"
+agent: "n_rnn"
+agent_output_type: "q"
+# update the target network every {} episodes
+target_update_interval: 200
+learner: "nq_learner"
+mixer: "qmix"
+double_q: True
+# network
+mixing_embed_dim: 32
+hypernet_embed: 64
+lr: 0.001
+td_lambda: 0.6
+optimizer: 'adam'
+q_lambda: False
+use_layer_norm: False
+use_orthogonal: False
+gain: 0.01
+# Priority experience replay
+use_per: False
+per_alpha: 0.6
+per_beta: 0.4
+return_priority: False
+
+name: "qmix"

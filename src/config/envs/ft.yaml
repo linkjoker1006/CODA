@@ -1,0 +1,28 @@
+env: "ft"
+
+env_args:
+  grid_shape: [8, 8]
+  n_agents: 4
+  n_treasures: 1
+  n_box1: 3
+  n_box2: 5
+  # n_box1: 6
+  # n_box2: 5
+  agent_view: [2, 2]
+  full_observable: False
+  step_cost: -0.01
+  open_penalty1: -1
+  open_penalty2: -2
+  coin_reward: 2
+  treasure_reward: 15
+  max_steps: 50
+
+# env
+t_max: 3000000
+test_greedy: True
+test_nepisode: 10
+test_interval: 10000
+log_interval: 10000
+runner_log_interval: 10000
+learner_log_interval: 10000
+save_model_interval: 500000
